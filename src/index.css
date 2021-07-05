@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://images.all-free-download.com/images/graphiclarge/ham_pattern_background_03_vector_179914.jpg');
+  display: grid;
+  place-items: center;
 }
 
 code {

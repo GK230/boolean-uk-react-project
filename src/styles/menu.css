@@ -1,0 +1,9 @@
+section.menu {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+h2 {
+    text-align: center;
+    padding: 1rem;
+}

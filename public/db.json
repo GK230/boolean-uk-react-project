@@ -1,0 +1,166 @@
+{
+  "veg": [
+    {
+      "name": "long beans",
+      "image": "assets/VegImages/Long-Beans.jpg",
+      "price": 2
+    },
+    {
+      "name": "green beans",
+      "image": "assets/VegImages/green-beans.jpg",
+      "price": 2
+    },
+    {
+      "name": "flat beans",
+      "image": "assets/VegImages/flat-beans.jpg",
+      "price": 2
+    },
+    {
+      "name": "cauliflower",
+      "image": "assets/VegImages/cauliflower.jpg",
+      "price": 2
+    },
+    {
+      "name": "peas",
+      "image": "assets/VegImages/peas.jpg",
+      "price": 2
+    },
+    {
+      "name": "okra",
+      "image": "assets/VegImages/okra.jpg",
+      "price": 2
+    },
+    {
+      "name": "spinach",
+      "image": "assets/VegImages/spinach.jpg",
+      "price": 2
+    }
+  ],
+
+  "beans": [
+    {
+      "name": "adzuki",
+      "image": "assets/BeanImages/adzuki-beans.jpg",
+      "price": 2
+    },
+    {
+      "name": "blackeye",
+      "image": "assets/BeanImages/blackeye-beans.jpg",
+      "price": 2
+    },
+    {
+      "name": "butter",
+      "image": "assets/BeanImages/butter-beans.jpg",
+      "price": 2
+    },
+    {
+      "name": "red kidney",
+      "image": "assets/BeanImages/kidney-beans.jpg",
+      "price": 2
+    }
+  ],
+  "dal": [
+    {
+      "name": "red lentil",
+      "image": "assets/DalImages/red-lentil.jpg",
+      "price": 2
+    },
+    {
+      "name": "moong bean",
+      "image": "assets/DalImages/moong-bean.jpg",
+      "price": 2
+    },
+    {
+      "name": "black lentil",
+      "image": "assets/DalImages/black-lentil.jpg",
+      "price": 2
+    },
+    {
+      "name": "chana",
+      "image": "assets/DalImages/chana.jpg",
+      "price": 2
+    }
+  ],
+  "bread & rice": [
+    {
+      "name": "fulka",
+      "image": "assets/bread-rice/fulka.jpg",
+      "price": 0.5
+    },
+    {
+      "name": "brown basmati rice",
+      "image": "assets/bread-rice/rice.jpg",
+      "price": 2
+    }
+  ],
+  "sides": [
+    {
+      "name": "side salad",
+      "image": "assets/sides/salad.jpg",
+      "price": 2
+    },
+    {
+      "papadoms": [
+        {
+          "flavour": "plain",
+          "image": "assets/sides/plain/jpg",
+          "price": 0.5
+        },
+        {
+          "flavour": "black pepper",
+          "image": "assets/sides/black-pepper.jpg",
+          "price": 0.5
+        },
+        {
+          "flavour": "green chilli",
+          "image": "assets/sides/green-chilli.jpg",
+          "price": 0.5
+        },
+        {
+          "flavour": "cumin",
+          "image": "assets/sides/cumin.jpg",
+          "price": 0.5
+        },
+        {
+          "flavour": "garlic",
+          "image": "assets/sides/garlic.jpg",
+          "price": 0.5
+        }
+      ]
+    },
+    {
+      "pickles": [
+        {
+          "name": "mango",
+          "image": "assets/sides/mango.jpg",
+          "price": 0.5
+        },
+        {
+          "name": "lime",
+          "image": "assets/sides/lime.jpg",
+          "price": 0.5
+        }
+      ]
+    }
+  ],
+  "descriptions": [
+    {
+      "veg": "Our vegetables are sauteed in sunflower oil, tossed in aromatic spices and sea salt and then gently steamed"
+    },
+    {
+      "beans": "Our beans are freshly cooked, sauteed in sunflower oil, tossed in aromatic spices, sea salt and served in a tomato sauce."
+    },
+    {
+      "dal": "Our dals are cooked with fresh vine tomatoes, green chillies and ginger, spiced with sea salt and aromatic spices, then tempered with sunflower oil and cumin, and garnished with fresh coriander"
+    },
+    {
+      "bread": "A fulka is a type of flame grilled Indian flat bread. Our fulkas are made using only stoneground, wholewheat flour and water"
+    },
+    {
+      "salad": "Mixed leaves, vine cherry tomatoes, cucumber"
+    },
+    {
+      "pappadoms": "All our papadoms are flame roasted"
+    }
+  ]
+}

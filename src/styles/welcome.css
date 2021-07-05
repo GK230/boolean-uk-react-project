@@ -1,0 +1,45 @@
+.welcome {
+  display: grid;
+  grid-template-rows: 350px 100px 75px 50px;
+  row-gap: 1rem;
+
+  place-items: center;
+}
+
+img.main-image {
+  width: 450px;
+  border: black solid 1px;
+}
+
+div.title {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  column-gap: 1rem;
+}
+
+img.logo {
+  width: 150px;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bolder;
+  align-self: center;
+}
+
+p {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+button.order {
+  background-color: #a61212;
+  width: 200px;
+  height: 50px;
+  border: none;
+  font-size: 2em;
+  color: #d6c44f;
+  border-radius: 30px;
+  justify-self: center;
+  font-weight: bolder;
+}

@@ -1,0 +1,15 @@
+div.menu-item {
+  display: grid;
+  grid-template-columns: 300px auto 200px;
+  border: black 1px solid;
+  background-color: #d6c44f;
+  padding: 3rem;
+  justify-self: center;
+}
+
+img.item-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: black solid 1px;
+}
