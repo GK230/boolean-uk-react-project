@@ -1,7 +1,6 @@
 article {
     display: grid;
     grid-template-rows: 200px;
-    border: black solid 1px;
     place-items: center;
 }
 

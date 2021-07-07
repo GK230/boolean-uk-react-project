@@ -1,6 +1,6 @@
 .welcome {
   display: grid;
-  grid-template-rows: 350px 100px 75px 50px;
+  grid-template-rows: 350px auto 75px 50px;
   row-gap: 1rem;
 
   place-items: center;
@@ -8,7 +8,6 @@
 
 img.main-image {
   width: 450px;
-  border: black solid 1px;
 }
 
 div.title {
@@ -22,18 +21,23 @@ img.logo {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 5em;
   font-weight: bolder;
   align-self: center;
 }
 
-p {
+p.subtitle {
   font-size: 3em;
   font-weight: bold;
+  color: #25401d;
+  text-align: center;
+  align-self: start;
 }
 
 button.order {
+  align-self: end;
   background-color: #a61212;
+  cursor: pointer;
   width: 200px;
   height: 50px;
   border: none;
@@ -42,4 +46,33 @@ button.order {
   border-radius: 30px;
   justify-self: center;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 1243px) {
+  p.subtitle {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  p.subtitle {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  p.subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  p.subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  img.main-image {
+    width: 350px;
+  }
 }

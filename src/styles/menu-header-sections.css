@@ -6,16 +6,20 @@
 .menu-item-header {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 50px;
-  align-self: end;
+  height: 63px;
   justify-self: center;
   width: 150px;
   color: #25401d;
-  border: black 1px solid;
-
+  cursor: pointer;
   background-color: #d6c44f;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 h3 {
   text-align: center;
+  align-self: end;
 }

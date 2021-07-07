@@ -1,9 +1,17 @@
 section.menu {
-    display: grid;
-    grid-template-rows: 100px 1fr;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.headings {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top: 2rem;
 }
 
 h2 {
-    text-align: center;
-    padding: 1rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
 }

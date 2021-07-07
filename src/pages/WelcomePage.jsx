@@ -1,5 +1,5 @@
-import tiffinPhoto from "../assets/tiffin-photo.jpg";
-import logo from "../assets/tiffin-icon.png";
+import tiffinPhoto from "../images/tiffin-photo.jpg";
+import logo from "../images/tiffin-icon.png";
 
 // import indianfont from '../assets/samarka
 
@@ -16,7 +16,7 @@ function WelcomePage() {
         <h1>Tiffin</h1>
       </div>
 
-      <p>The healthy, vegan Indian food delivery service</p>
+      <p className="subtitle">The healthy, delicious, vegan Indian food delivery service</p>
       <Link to="/menu">
         <button className="order">Order</button>
       </Link>

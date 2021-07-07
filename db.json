@@ -1,0 +1,248 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "long beans",
+      "image": "assets/VegImages/Long-Beans.jpg",
+      "price": 2,
+      "type": "veg"
+    },
+    {
+      "id": 2,
+      "name": "green beans",
+      "image": "assets/VegImages/green-beans.jpg",
+      "price": 2,
+      "type": "veg"
+    },
+    {
+      "id": 3,
+      "name": "flat beans",
+      "image": "assets/VegImages/flat-beans.jpg",
+      "price": 2,
+      "type": "veg"
+    },
+    {
+      "id": 4,
+      "name": "cauliflower",
+      "image": "assets/VegImages/cauliflower.jpg",
+      "price": 2,
+      "type": "veg"
+    },
+    {
+      "id": 5,
+      "name": "peas",
+      "image": "assets/VegImages/peas.jpg",
+      "price": 2,
+      "type": "veg"
+    },
+    {
+      "id": 6,
+      "name": "okra",
+      "image": "assets/VegImages/okra.jpg",
+      "price": 2,
+      "type": "veg"
+    },
+    {
+      "id": 7,
+      "name": "spinach",
+      "image": "assets/VegImages/spinach.jpg",
+      "price": 2,
+      "type": "veg"
+    },
+    {
+      "id": 8,
+      "name": "adzuki",
+      "image": "assets/BeanImages/adzuki-beans.jpg",
+      "price": 2,
+      "type": "beans"
+    },
+    {
+      "id": 9,
+      "name": "blackeye",
+      "image": "assets/BeanImages/blackeye-beans.jpg",
+      "price": 2,
+      "type": "beans"
+    },
+    {
+      "id": 10,
+      "name": "butter",
+      "image": "assets/BeanImages/butter-beans.jpg",
+      "price": 2,
+      "type": "beans"
+    },
+    {
+      "id": 11,
+      "name": "red kidney",
+      "image": "assets/BeanImages/kidney-beans.jpg",
+      "price": 2,
+      "type": "beans"
+    },
+    {
+      "id": 12,
+      "name": "red lentil",
+      "image": "assets/DalImages/red-lentil.jpg",
+      "price": 2,
+      "type": "dal"
+    },
+    {
+      "id": 13,
+      "name": "moong bean",
+      "image": "assets/DalImages/moong-bean.jpg",
+      "price": 2,
+      "type": "dal"
+    },
+    {
+      "id": 14,
+      "name": "black lentil",
+      "image": "assets/DalImages/black-lentil.jpg",
+      "price": 2,
+      "type": "dal"
+    },
+    {
+      "id": 15,
+      "name": "chana",
+      "image": "assets/DalImages/chana.jpg",
+      "price": 2,
+      "type": "dal"
+    },
+    {
+      "id": 16,
+      "name": "fulka",
+      "image": "assets/bread-rice/fulka.jpg",
+      "price": 0.5,
+      "type": "bread"
+    },
+    {
+      "id": 17,
+      "name": "brown basmati rice",
+      "image": "assets/bread-rice/rice.jpg",
+      "price": 2,
+      "type": "rice"
+    },
+    {
+      "id": 18,
+      "name": "side salad",
+      "image": "assets/sides/salad.jpg",
+      "price": 2,
+      "type": "salad"
+    },
+    {
+      "id": 19,
+      "name": "plain",
+      "image": "assets/sides/plain.jpg",
+      "price": 0.5,
+      "type": "papadom"
+    },
+    {
+      "id": 20,
+      "name": "black pepper",
+      "image": "assets/sides/black-pepper.jpg",
+      "price": 0.5,
+      "type": "papadom"
+    },
+    {
+      "id": 21,
+      "name": "green chilli",
+      "image": "assets/sides/green-chilli.jpg",
+      "price": 0.5,
+      "type": "papadom"
+    },
+    {
+      "id": 22,
+      "name": "cumin",
+      "image": "assets/sides/cumin.jpg",
+      "price": 0.5,
+      "type": "papadom"
+    },
+    {
+      "id": 23,
+      "name": "garlic",
+      "image": "assets/sides/garlic.jpg",
+      "price": 0.5,
+      "type": "papadom"
+    },
+    {
+      "id": 24,
+      "name": "mango pickle",
+      "image": "assets/sides/mango.jpg",
+      "price": 0.5,
+      "type": "pickle"
+    },
+    {
+      "id": 25,
+      "name": "lime pickle",
+      "image": "assets/sides/lime.jpg",
+      "price": 0.5,
+      "type": "pickle"
+    },
+    {
+      "id": 26,
+      "name": "water 500ml",
+      "image": "assets/water-juice/water-small.jpg",
+      "type": "drink",
+      "price": 1
+    },
+    {
+      "id": 27,
+      "name": "water 1l",
+      "image": "assets/water-juice/water-large.jpg",
+      "type": "drink",
+      "price": 2
+    },
+    {
+      "id": 28,
+      "name": "carrot & ginger juice",
+      "image": "assets/water-juice/carrot-ginger-juice.jpg",
+      "type": "drink",
+      "price": 3
+    },
+    {
+      "id": 29,
+      "name": "small set meal",
+      "image": "assets/set-meals/thali.jpg",
+      "type": "set-meal",
+      "price": 7.5
+    },
+    {
+      "id": 30,
+      "name": "medium set meal",
+      "image": "assets/set-meals/thali2.jpg",
+      "type": "set-meal",
+      "price": 10
+    }
+  ],
+  "descriptions": [
+    {
+      "type": "veg",
+      "description": "Our vegetables are sauteed in sunflower oil, tossed in aromatic spices and sea salt and then gently steamed"
+    },
+    {
+      "type": "beans",
+      "description": "Our beans are freshly cooked, sauteed in sunflower oil, tossed in aromatic spices, sea salt and served in a tomato sauce."
+    },
+    {
+      "type": "dal",
+      "description": "Our dals are cooked with fresh vine tomatoes, green chillies and ginger, spiced with sea salt and aromatic spices, then tempered with sunflower oil and cumin, and garnished with fresh coriander"
+    },
+    {
+      "type": "bread",
+      "description": "A fulka is a type of flame grilled Indian flat bread. Our fulkas are made using only stoneground, wholewheat flour and water"
+    },
+    {
+      "type": "salad",
+      "description": "Our side salad is a mix of mixed leaves, vine cherry tomatoes and cucumber"
+    },
+    {
+      "type": "papadoms",
+      "description": "All our papadoms are flame roasted"
+    },
+    {
+      "type": "small-set-meal",
+      "description": "Small thali: 1 veg, 1 fulka, 1 dal, rice, side salad, 1 pickle, 1 papadom"
+    },
+    {
+      "type": "medium-set-meal",
+      "description": "Medium thali: 1 veg, 1 bean, 2 fulka, 1 dal, rice, side salad, 1 pickle, 1 papadom"
+    }
+  ]
+}

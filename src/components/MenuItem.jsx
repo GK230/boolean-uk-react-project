@@ -1,12 +1,18 @@
 import "../styles/menu-item.css";
-import longBeans from "../assets/VegImages/Long-Beans.jpg";
+import useStore from "../store";
+// import Counter from "react-native-counters";
 
-function MenuItem() {
+function MenuItem({ item }) {
+  // const addToCart = useStore((store) => addToCart());
+
   return (
     <div className="menu-item">
-      <h4>Long Beans</h4>
-      <img className="item-image" src={longBeans} alt="long beans" />
-      <h5>£2</h5>
+      <h4>{item.name}</h4>
+      <img className="item-image" src={"../" + item.image} alt={item.name} />
+      <p>£{Number(item.price).toFixed(2)}</p>
+      {/* <button className="add-to-cart" onClick={addToCart(item.id)}> */}
+      {/* Add to order */}
+      {/* </button> */}
     </div>
   );
 }

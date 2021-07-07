@@ -1,14 +1,23 @@
-import '../styles/menu.css'
+import "../styles/menu.css";
 
 import MenuHeaderSections from "../components/MenuHeaderSections";
-import MenuSection from "../components/MenuSections";
+import MenuSections from "../components/MenuSections";
+
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
     <section className="menu">
-      <h2>Menu</h2>
+      <div className="headings">
+        <h2>Menu</h2>
+        <Link to="/order">
+          <button className="order">
+            Your Order
+          </button>
+        </Link>
+      </div>
       <MenuHeaderSections />
-      <MenuSection />
+      <MenuSections />
     </section>
   );
 }

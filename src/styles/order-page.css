@@ -1,0 +1,7 @@
+article {
+    background-color: antiquewhite;
+    border: black ridge 2px;
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: 1rem;
+}
