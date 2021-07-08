@@ -3,6 +3,9 @@ import create from "zustand";
 const useStore = create((set, get) => ({
   menu: [],
   descriptions: [],
+  cart: [],
+  total: {},
+  setMeals: [],
 
   fetchDes: () => {
     fetch("http://localhost:4000/descriptions")
@@ -13,6 +16,11 @@ const useStore = create((set, get) => ({
     fetch("http://localhost:4000/menu")
       .then((resp) => resp.json())
       .then((menu) => set({ menu: menu }));
+  },
+  fetchCart: () => {
+    fetch("http://localhost:4000/cart")
+      .then((resp) => resp.json())
+      .then((cart) => set({ cart: cart }));
   },
 
   getVeg: () => {
@@ -43,10 +51,18 @@ const useStore = create((set, get) => ({
     );
     return sides;
   },
+  getSmallSetMeal: () => {
+    const smallSetMeal = get().menu.filter(
+      (item) => item.type === "small-set-meal"
+    );
+    return smallSetMeal;
+  },
 
-  getSetMeals: () => {
-    const setMeals = get().menu.filter((item) => item.type === "set-meal");
-    return setMeals;
+  getMedSetMeal: () => {
+    const medSetMeal = get().menu.filter(
+      (item) => item.type === "med-set-meal"
+    );
+    return medSetMeal;
   },
   getDrinks: () => {
     const drinks = get().menu.filter((item) => item.type === "drink");
@@ -102,50 +118,66 @@ const useStore = create((set, get) => ({
     return mediumSetMealDes;
   },
 
-  cart: [],
-  addToCart: (id) =>
-    set((state) => {
-      const inCart = state.cart.find((item) => item.id === id);
+  addToCart: (menuItemId) => {
+    const cartItem = {
+      menuItemId: menuItemId,
+      quantity: 1,
+    };
 
-      if (!inCart) {
-        return {
-          ...state,
-          cart: [...state.cart, { id, count: 1 }],
-        };
-      }
+    const itemInCart = get().cart.find(
+      (cartItem) => cartItem.id === menuItemId
+    );
 
-      const updatedCart = state.cart.map((item) =>
-        item.id === id ? { ...item, count: item.count + 1 } : item
-      );
+    // IF THE ITEM IS IN THE CART
+    if (itemInCart !== undefined) {
+      fetch(`http://localhost:4000/cart/${menuItemId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ quantity: cartItem.quantity + 1 }),
+      });
+    } else {
+      fetch("http://localhost:4000/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartItem),
+      })
+        .then((resp) => resp.json())
+        .then((cartItem) => set({ cart: [...get().cart, cartItem] }));
+    }
+  },
 
-      return {
-        ...state,
-        cart: updatedCart,
-      };
-    }),
-  removeFromCart: (id) =>
-    set((state) => {
-      const isPresent = state.cart.findIndex((item) => item.id === id);
+  removeFromCart: (cartItemId) => {
+    const itemToRemove = get().cart.find(
+      (cartItem) => cartItem.id === cartItemId
+    );
 
-      if (isPresent === -1) {
-        return {
-          ...state,
-        };
-      }
+    if (itemToRemove.quantity === 1) {
+      fetch(`http://localhost:4000/cart/${itemToRemove}`, {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
+    } else {
+      itemToRemove.quantity--;
+    }
+  },
+  calculateTotal: () => {
+    // let total = 0;
 
-      const updatedCart = state.cart
-        .map((item) =>
-          item.id === id
-            ? { ...item, count: Math.max(item.count - 1, 0) }
-            : item
-        )
-        .filter((item) => item.count);
+    // for (const itemFromCart of state.cart) {
+    //   const foundItem = state.store.find(function (itemFromStore) {
+    //     return itemFromCart.id === itemFromStore.id;
+    //   });
 
-      return {
-        ...state,
-        cart: updatedCart,
-      };
-    }),
+    //   total += itemInCart.price * itemFromCart.quantity;
+    // }
+    // return total;
+  },
 }));
 
 export default useStore;

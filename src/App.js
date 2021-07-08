@@ -1,6 +1,6 @@
 import "./App.css";
 import WelcomePage from "./pages/WelcomePage";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Menu from "./pages/Menu";
 import useStore from "./store";
 import { useEffect } from "react";
@@ -10,12 +10,16 @@ import ReciptPage from "./pages/ReciptPage";
 function App() {
   const fetchMenu = useStore((store) => store.fetchMenu);
   const fetchDes = useStore((store) => store.fetchDes);
+  const fetchCart = useStore((store) => store.fetchCart);
 
   useEffect(() => {
     fetchDes();
   }, []);
   useEffect(() => {
     fetchMenu();
+  }, []);
+  useEffect(() => {
+    fetchCart();
   }, []);
 
   return (
@@ -25,6 +29,9 @@ function App() {
           <WelcomePage />
         </Route>
         <Route path="/menu">
+        {/* <Redirect exact from="/menu" to="/menu/veg" /> */}
+          {/* <Redirect to="/menu/veg" /> */}
+
           <Menu />
         </Route>
         <Route exact path="/order">

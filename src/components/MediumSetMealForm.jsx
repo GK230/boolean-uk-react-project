@@ -1,11 +1,8 @@
 import "../styles/medium-set-meal-form.css";
-import thali from "../images/thali2.jpg";
-
 
 function MediumSetMealForm() {
   return (
     <form>
-      <img className="thali" src={thali} alt="medium thali" />
       <div className="medium-select">
         <label htmlFor="veg">
           Choose your veg:
@@ -38,9 +35,6 @@ function MediumSetMealForm() {
           </select>
         </label>
       </div>
-      {/* <button className="add-to-cart" onClick={addToCart(item.id)}> */}
-      {/* Add to order */}
-      {/* </button> */}{" "}
     </form>
   );
 }

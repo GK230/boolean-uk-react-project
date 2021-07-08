@@ -1,5 +1,5 @@
 function ReciptPage() {
-  return;
+  return(<div></div>);
 }
 
 export default ReciptPage;

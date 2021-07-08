@@ -1,10 +1,8 @@
 import "../styles/small-set-meal-form.css";
-import thali from "../images/thali.jpg";
 
-function SmallSetMealForm() {
+function SmallSetMealForm({item, addToCart}) {
   return (
     <form>
-      <img className="thali" src={thali} alt="small thali" />
       <div className="small-select">
       <label htmlFor="veg">
         Choose your veg:
@@ -28,9 +26,7 @@ function SmallSetMealForm() {
         </select>
       </label>
       </div>
-      {/* <button className="add-to-cart" onClick={addToCart(item.id)}> */}
-      {/* Add to order */}
-      {/* </button> */}{" "}
+      
     </form>
   );
 }

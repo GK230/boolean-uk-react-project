@@ -1,7 +1,17 @@
-article {
-    background-color: antiquewhite;
-    border: black ridge 2px;
+section {
     display: grid;
-    grid-template-rows: auto;
-    row-gap: 1rem;
+    grid-template-rows: auto 50px 1fr;
+    place-items: center;
+}
+
+article.order-article {
+    margin-top: 6rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 1rem;
+    background-color: antiquewhite;
 }

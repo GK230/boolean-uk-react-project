@@ -1,6 +1,7 @@
 .menu-section-description {
   display: grid;
   width: 65.7rem;
+  height: 100px;
   color: black;
   font-size: 3rem;
   background-color: #d6c44f;

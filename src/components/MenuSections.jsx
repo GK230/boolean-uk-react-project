@@ -4,6 +4,7 @@ import useStore from "../store";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 import SmallSetMealForm from "./SmallSetMealForm";
 import MediumSetMealForm from "./MediumSetMealForm";
+import LoadingPage from "../pages/LoadingPage";
 
 function MenuSections() {
   let { path, url } = useRouteMatch();
@@ -13,7 +14,9 @@ function MenuSections() {
   const dal = useStore((store) => store.getDal());
   const breadRice = useStore((store) => store.getBreadRice());
   const sides = useStore((store) => store.getSides());
-  const setMeals = useStore((store) => store.getSetMeals());
+  const smallSetMeal = useStore((store) => store.getSmallSetMeal());
+  const medSetMeal = useStore((store) => store.getMedSetMeal());
+
   const drinks = useStore((store) => store.getDrinks());
   const vegDes = useStore((store) => store.getVegDes());
   const beansDes = useStore((store) => store.getBeansDes());
@@ -23,15 +26,15 @@ function MenuSections() {
   const papadomsDes = useStore((store) => store.getPapadomsDes());
   const smallSetMealDes = useStore((store) => store.getSmallSetMealDes());
   const mediumSetMealDes = useStore((store) => store.getMediumSetMealDes());
+  console.log(smallSetMeal);
 
   if (vegDes.length === 0 || beansDes === 0 || dalDes === 0) {
-    return <div>Loading....</div>;
+    return <LoadingPage />;
   }
   return (
     <Switch>
       <Route exact path={`${path}/veg`}>
         <article>
-          {/* {description = } */}
           <Description description={vegDes[0].description} />
           <ul>
             {veg.map((item) => (
@@ -99,8 +102,22 @@ function MenuSections() {
       <Route path={`${path}/set-meals`}>
         <article>
           <Description description={smallSetMealDes[0].description} />
+          <ul>
+            {smallSetMeal.map((item) => (
+              <li key={item.id}>
+                <MenuItem item={item} />
+              </li>
+            ))}
+          </ul>
           <SmallSetMealForm />
           <Description description={mediumSetMealDes[0].description} />
+          <ul>
+            {medSetMeal.map((item) => (
+              <li key={item.id}>
+                <MenuItem item={item} />
+              </li>
+            ))}
+          </ul>
           <MediumSetMealForm />
         </article>
       </Route>

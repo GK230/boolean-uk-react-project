@@ -200,14 +200,14 @@
       "id": 29,
       "name": "small set meal",
       "image": "assets/set-meals/thali.jpg",
-      "type": "set-meal",
+      "type": "small-set-meal",
       "price": 7.5
     },
     {
       "id": 30,
       "name": "medium set meal",
       "image": "assets/set-meals/thali2.jpg",
-      "type": "set-meal",
+      "type": "med-set-meal",
       "price": 10
     }
   ],
@@ -243,6 +243,18 @@
     {
       "type": "medium-set-meal",
       "description": "Medium thali: 1 veg, 1 bean, 2 fulka, 1 dal, rice, side salad, 1 pickle, 1 papadom"
+    }
+  ],
+  "cart": [
+    {
+      "menuItemId": 1,
+      "quantity": 2,
+      "id": 1
+    },
+    {
+      "menuItemId": 2,
+      "quantity": 2,
+      "id": 2
     }
   ]
 }
