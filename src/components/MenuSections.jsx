@@ -1,13 +1,14 @@
 import MenuItem from "./MenuItem";
 import Description from "./Description";
 import useStore from "../store";
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Route, Switch, useRouteMatch, Redirect, useParams } from "react-router-dom";
 import SmallSetMealForm from "./SmallSetMealForm";
 import MediumSetMealForm from "./MediumSetMealForm";
 import LoadingPage from "../pages/LoadingPage";
 
 function MenuSections() {
   let { path, url } = useRouteMatch();
+
 
   const veg = useStore((store) => store.getVeg());
   const beans = useStore((store) => store.getBeans());
@@ -26,13 +27,15 @@ function MenuSections() {
   const papadomsDes = useStore((store) => store.getPapadomsDes());
   const smallSetMealDes = useStore((store) => store.getSmallSetMealDes());
   const mediumSetMealDes = useStore((store) => store.getMediumSetMealDes());
-  console.log(smallSetMeal);
 
   if (vegDes.length === 0 || beansDes === 0 || dalDes === 0) {
     return <LoadingPage />;
   }
   return (
     <Switch>
+      <Route exact path={`${path}/`}>
+        <Redirect to="/menu/veg" />
+      </Route>
       <Route exact path={`${path}/veg`}>
         <article>
           <Description description={vegDes[0].description} />
@@ -101,7 +104,6 @@ function MenuSections() {
 
       <Route path={`${path}/set-meals`}>
         <article>
-          <Description description={smallSetMealDes[0].description} />
           <ul>
             {smallSetMeal.map((item) => (
               <li key={item.id}>
@@ -109,8 +111,9 @@ function MenuSections() {
               </li>
             ))}
           </ul>
+          <Description description={smallSetMealDes[0].description} />
+
           <SmallSetMealForm />
-          <Description description={mediumSetMealDes[0].description} />
           <ul>
             {medSetMeal.map((item) => (
               <li key={item.id}>
@@ -118,6 +121,8 @@ function MenuSections() {
               </li>
             ))}
           </ul>
+          <Description description={mediumSetMealDes[0].description} />
+
           <MediumSetMealForm />
         </article>
       </Route>

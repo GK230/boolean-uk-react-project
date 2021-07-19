@@ -51,56 +51,56 @@
     },
     {
       "id": 8,
-      "name": "adzuki",
+      "name": "adzuki beans",
       "image": "assets/BeanImages/adzuki-beans.jpg",
       "price": 2,
       "type": "beans"
     },
     {
       "id": 9,
-      "name": "blackeye",
+      "name": "blackeye beans",
       "image": "assets/BeanImages/blackeye-beans.jpg",
       "price": 2,
       "type": "beans"
     },
     {
       "id": 10,
-      "name": "butter",
+      "name": "butter beans",
       "image": "assets/BeanImages/butter-beans.jpg",
       "price": 2,
       "type": "beans"
     },
     {
       "id": 11,
-      "name": "red kidney",
+      "name": "red kidney beans",
       "image": "assets/BeanImages/kidney-beans.jpg",
       "price": 2,
       "type": "beans"
     },
     {
       "id": 12,
-      "name": "red lentil",
+      "name": "red lentil dal",
       "image": "assets/DalImages/red-lentil.jpg",
       "price": 2,
       "type": "dal"
     },
     {
       "id": 13,
-      "name": "moong bean",
+      "name": "moong bean dal",
       "image": "assets/DalImages/moong-bean.jpg",
       "price": 2,
       "type": "dal"
     },
     {
       "id": 14,
-      "name": "black lentil",
+      "name": "black lentil dal",
       "image": "assets/DalImages/black-lentil.jpg",
       "price": 2,
       "type": "dal"
     },
     {
       "id": 15,
-      "name": "chana",
+      "name": "chana dal",
       "image": "assets/DalImages/chana.jpg",
       "price": 2,
       "type": "dal"
@@ -128,35 +128,35 @@
     },
     {
       "id": 19,
-      "name": "plain",
+      "name": "plain papadom",
       "image": "assets/sides/plain.jpg",
       "price": 0.5,
       "type": "papadom"
     },
     {
       "id": 20,
-      "name": "black pepper",
+      "name": "black pepper papadom",
       "image": "assets/sides/black-pepper.jpg",
       "price": 0.5,
       "type": "papadom"
     },
     {
       "id": 21,
-      "name": "green chilli",
+      "name": "green chilli papadom",
       "image": "assets/sides/green-chilli.jpg",
       "price": 0.5,
       "type": "papadom"
     },
     {
       "id": 22,
-      "name": "cumin",
+      "name": "cumin papadom",
       "image": "assets/sides/cumin.jpg",
       "price": 0.5,
       "type": "papadom"
     },
     {
       "id": 23,
-      "name": "garlic",
+      "name": "garlic papadom",
       "image": "assets/sides/garlic.jpg",
       "price": 0.5,
       "type": "papadom"
@@ -238,22 +238,22 @@
     },
     {
       "type": "small-set-meal",
-      "description": "Small thali: 1 veg, 1 fulka, 1 dal, rice, side salad, 1 pickle, 1 papadom"
+      "description": "1 veg, 1 fulka, 1 dal, rice, side salad, 1 pickle, 1 papadom"
     },
     {
       "type": "medium-set-meal",
-      "description": "Medium thali: 1 veg, 1 bean, 2 fulka, 1 dal, rice, side salad, 1 pickle, 1 papadom"
+      "description": "1 veg, 1 bean, 2 fulka, 1 dal, rice, side salad, 1 pickle, 1 papadom"
     }
   ],
   "cart": [
     {
-      "menuItemId": 1,
-      "quantity": 2,
+      "menuItemId": 29,
+      "quantity": 1,
       "id": 1
     },
     {
-      "menuItemId": 2,
-      "quantity": 2,
+      "menuItemId": 13,
+      "quantity": 1,
       "id": 2
     }
   ]

@@ -30,7 +30,6 @@ function App() {
         </Route>
         <Route path="/menu">
         {/* <Redirect exact from="/menu" to="/menu/veg" /> */}
-          {/* <Redirect to="/menu/veg" /> */}
 
           <Menu />
         </Route>

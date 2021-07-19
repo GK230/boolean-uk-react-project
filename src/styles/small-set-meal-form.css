@@ -9,7 +9,7 @@ form {
 
 form .small-select {
   display: grid;
-  grid-template-rows: repeat(4, 75px);
+  grid-template-columns: repeat(4, 300px);
 
 }
 

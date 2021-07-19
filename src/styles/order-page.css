@@ -1,17 +1,22 @@
-section {
-    display: grid;
-    grid-template-rows: auto 50px 1fr;
-    place-items: center;
+section.order-section {
+  background-color: antiquewhite;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 article.order-article {
-    margin-top: 6rem;
+  margin-top: 2rem;
 }
 
 h5 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 1rem;
-    background-color: antiquewhite;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1rem;
+  background-color: antiquewhite;
+}
+
+button.place-order {
+  display: grid;
+  place-items: center;
 }

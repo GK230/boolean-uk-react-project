@@ -1,11 +1,28 @@
 import "../styles/menu-header-sections.css";
-import { Router, Switch, Link, Route, useRouteMatch } from "react-router-dom";
+import {
+  Router,
+  Switch,
+  Link,
+  Route,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 
 function MenuHeaderSections() {
   let { path, url } = useRouteMatch();
+  let { menuSection } = useParams();
+
+  // // Loop through the buttons and add the active class to the current/clicked button
+  // for (var i = 0; i < btns.length; i++) {
+  //   btns[i].addEventListener("click", function () {
+  //     var current = document.getElementsByClassName("active");
+  //     current[0].className = current[0].className.replace(" active", "");
+  //     this.className += " active";
+  //   });
+  // }
 
   return (
-    <div className="menu-header-sections">
+    <div className="menu-header-sections active">
       <Link to={`${url}/veg`}>
         <div className="menu-item-header">
           <h3>Veg</h3>

@@ -1,9 +1,14 @@
 import "../styles/order-item.css";
 import useStore from "../store";
 
-function OrderItem({ cartItem, menuItem, item }) {
+function OrderItem({ cartItem, menuItem }) {
   const addToCart = useStore((store) => store.addToCart);
   const removeFromCart = useStore((store) => store.removeFromCart);
+  const result = useStore((store) => store.calculateTotal());
+
+  // if (menuItem.id === 29 || menuItem.id === 30) {
+
+  // }
 
   return (
     <li className="order-item" key={cartItem.id}>
@@ -23,7 +28,7 @@ function OrderItem({ cartItem, menuItem, item }) {
           +
         </button>
       </div>
-      <h4>£{menuItem.price}</h4>
+      <h4>£{result[menuItem.name].toFixed(2)}</h4>
     </li>
   );
 }

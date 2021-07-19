@@ -1,0 +1,10 @@
+li {
+    background-color: antiquewhite;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+p {
+    display: inline-block;
+    margin-right: 2rem;
+}

@@ -4,7 +4,6 @@ const useStore = create((set, get) => ({
   menu: [],
   descriptions: [],
   cart: [],
-  total: {},
   setMeals: [],
 
   fetchDes: () => {
@@ -124,19 +123,42 @@ const useStore = create((set, get) => ({
       quantity: 1,
     };
 
+    // if (menuItemId === 29) {
+    //   const smallMealVeg = smallVeg.target.value;
+    //   const smallMealDal = smallDal.target.value;
+    // }
+
+    // if (menuItemId === 30) {
+    //   const medMealVeg = medVeg.target.value;
+    //   const medMealBeans = medBeans.target.value;
+    //   const medMealDal = medDal.target.value;
+    // }
+
     const itemInCart = get().cart.find(
       (cartItem) => cartItem.id === menuItemId
     );
 
     // IF THE ITEM IS IN THE CART
     if (itemInCart !== undefined) {
+      const increasedQuantity = {
+        id: menuItemId,
+        quantity: itemInCart.quantity + 1,
+      };
       fetch(`http://localhost:4000/cart/${menuItemId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ quantity: cartItem.quantity + 1 }),
-      });
+        body: JSON.stringify(increasedQuantity),
+      })
+        .then((resp) => resp.json())
+        .then((cartItem) =>
+          set({
+            cart: get().cart.map((item) =>
+              item.menuItemId === cartItem.menuItemId ? cartItem : item
+            ),
+          })
+        );
     } else {
       fetch("http://localhost:4000/cart", {
         method: "POST",
@@ -154,29 +176,50 @@ const useStore = create((set, get) => ({
     const itemToRemove = get().cart.find(
       (cartItem) => cartItem.id === cartItemId
     );
+    console.log(cartItemId);
 
     if (itemToRemove.quantity === 1) {
-      fetch(`http://localhost:4000/cart/${itemToRemove}`, {
+      fetch(`http://localhost:4000/cart/${cartItemId}`, {
         method: "DELETE",
         headers: {
           "Content-type": "application/json",
         },
-      });
+      })
+        .then((resp) => resp.json())
+        .then((cartItem) => set({ cart: [...get().cart, cartItem] }));
     } else {
-      itemToRemove.quantity--;
+      const decreasedQuantity = {
+        id: cartItemId,
+        quantity: itemToRemove.quantity - 1,
+      };
+      fetch(`http://localhost:4000/cart/${cartItemId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(decreasedQuantity),
+      })
+        .then((resp) => resp.json())
+        .then((cartItem) =>
+          set({
+            cart: get().cart.map((item) =>
+              item.menuItemId === cartItem.menuItemId ? cartItem : item
+            ),
+          })
+        );
     }
   },
   calculateTotal: () => {
-    // let total = 0;
+    let result = { total: 0 };
 
-    // for (const itemFromCart of state.cart) {
-    //   const foundItem = state.store.find(function (itemFromStore) {
-    //     return itemFromCart.id === itemFromStore.id;
-    //   });
-
-    //   total += itemInCart.price * itemFromCart.quantity;
-    // }
-    // return total;
+    for (const cartItem of get().cart) {
+      const menuItem = get().menu.find(
+        (menuItem) => menuItem.id === cartItem.menuItemId
+      );
+      result[menuItem.name] = menuItem.price * cartItem.quantity;
+      result.total += menuItem.price * cartItem.quantity;
+    }
+    return result;
   },
 }));
 

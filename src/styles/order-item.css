@@ -1,6 +1,6 @@
 li.order-item {
   display: grid;
-  grid-template-columns: 300px 1fr 1fr;
+  grid-template-columns: 200px 1fr 100px;
   background-color: antiquewhite;
   justify-content: left;
   padding: 1rem;

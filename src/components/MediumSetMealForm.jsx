@@ -1,12 +1,21 @@
 import "../styles/medium-set-meal-form.css";
 
 function MediumSetMealForm() {
+  function handleChange(e) {
+    let smallVeg = e.target.value;
+  }
+
   return (
     <form>
       <div className="medium-select">
-        <label htmlFor="veg">
+        <label htmlFor="medVeg">
           Choose your veg:
-          <select className="veg" name="veg" id="veg">
+          <select
+            className="medVeg"
+            name="veg"
+            id="veg"
+            onChange={handleChange}
+          >
             <option value="longBeans">Long Beans</option>
             <option value="greenBeans">Green Beans</option>
             <option value="flatBeans">Flat Beans</option>
@@ -16,18 +25,28 @@ function MediumSetMealForm() {
             <option value="spinach">Spinach</option>
           </select>
         </label>
-        <label htmlFor="dal">
+        <label htmlFor="medBeans">
           Choose your beans:
-          <select className="beans" name="beans" id="beans">
+          <select
+            className="medBeans"
+            name="beans"
+            id="beans"
+            onChange={handleChange}
+          >
             <option value="adzuki">Adzuki</option>
             <option value="blackeye">Blackeye</option>
             <option value="butter">Butter</option>
             <option value="kidney">Red Kidney</option>
           </select>
         </label>
-        <label htmlFor="dal">
+        <label htmlFor="medDal">
           Choose your dal:
-          <select className="dal" name="dal" id="dal">
+          <select
+            className="medDal"
+            name="dal"
+            id="dal"
+            onChange={handleChange}
+          >
             <option value="redLentil">Red Lentil</option>
             <option value="moongBean">Moong Bean</option>
             <option value="blackLentil">Black Lentil</option>

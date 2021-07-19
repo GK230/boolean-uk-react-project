@@ -9,7 +9,7 @@ form {
   
   form .medium-select {
     display: grid;
-    grid-template-rows: repeat(6, 75px);
+    grid-template-columns: repeat(6, 300px);
   
   }
   
